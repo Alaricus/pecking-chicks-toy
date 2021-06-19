@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Toy</title>
+    <meta charset="utf-8">
+    <style>
+      #toy {
+        position:relative;
+        width: 30rem;
+        margin: 10rem auto 0 auto;
+      }
+
+      .slider {
+        width: 100%;
+        height: 1.75rem;
+        margin: 2px 0;
+        border-radius: 2px;
+        background-color: #9e6804;
+      }
+
+      #sliderTop {
+        animation: slideR 2s linear infinite;
+      }
+
+      #sliderBot {
+        animation: slideL 2s linear infinite;
+      }
+
+      #topLayer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 100%;
+        width: 100%;
+      }
+
+      .attachment {
+        height: 100%;
+        width: 1.5rem;
+        background: goldenrod;
+        border-radius: 0 0 3rem 3rem;
+        animation: rock 2s linear infinite;
+      }
+
+      .chickBody {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        background: goldenrod;
+        transform: translate(-50%, -106%);
+      }
+
+      .chickBodyLeft {
+        border-radius: 0 50% 50% 50%;
+      }
+
+      .chickBodyRight {
+        border-radius: 50% 0 50% 50%;
+      }
+
+      .chickLeg {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 1.5rem;
+        height: 1rem;
+        background: goldenrod;
+        transform: translate(-50%, 72%);
+      }
+
+      .chickHead {
+        position: absolute;
+        top: 0;
+        width: 4.7rem;
+        height: 4.7rem;
+        background: goldenrod;
+      }
+
+      .chickHeadLeft {
+        right: 0;
+        border-radius: 50% 50% 0 50%;
+        transform: translate(3rem, -1rem);
+      }
+
+      .chickHeadRight {
+        left: 0;
+        border-radius: 50% 50% 50% 0;
+        transform: translate(-3rem, -1rem);
+      }
+
+      #chickEyeLeft {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 0.65rem;
+        height: 0.65rem;
+        background: black;
+        border-radius: 50%;
+        transform: translate(-0.65rem, -1.3rem);
+      }
+
+      #chickEyeRight {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0.65rem;
+        height: 0.65rem;
+        background: black;
+        border-radius: 50%;
+        transform: translate(0.65rem, -1.3rem);
+      }
+
+      .nail {
+        position: absolute;
+        left: 50%;
+        width: 0.3rem;
+        height: 0.3rem;
+        background: gray;
+        border-radius: 50%;
+      }
+
+      .nailTop {
+        top: 26%;
+        transform: translate(-50%);
+      }
+
+      .nailBot {
+        bottom: 0;
+        transform: translate(-50%, -200%);
+      }
+
+      @keyframes rock {
+        0% { transform: rotate(0deg); }
+        25% { transform: rotate(20deg); }
+        50%{ transform: rotate(0deg); }
+        75% { transform: rotate(-20deg); }
+        100% { transform: rotate(0deg); }
+      }
+
+      @keyframes slideR {
+        0% { transform: translate(0px); }
+        25% { transform: translate(0.5rem); }
+        50%{ transform: translate(0px); }
+        75% { transform: translate(-0.5rem); }
+        100% { transform: translate(0px); }
+      }
+
+      @keyframes slideL {
+        0% { transform: translate(0px); }
+        25% { transform: translate(-0.5rem); }
+        50%{ transform: translate(0px); }
+        75% { transform: translate(0.5rem); }
+        100% { transform: translate(0px); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="toy">
+      <div class="slider" id="sliderTop"></div>
+      <div class="slider" id="sliderBot"></div>
+      <div id="topLayer">
+        <div class="attachment">
+          <div class="nail nailTop"></div>
+          <div class="nail nailBot"></div>
+          <div class="chickBody chickBodyLeft">
+            <div class="chickHead chickHeadLeft">
+              <div id="chickEyeLeft"></div>
+            </div>
+            <div class="chickLeg"></div>
+          </div>
+        </div>
+        <div class="attachment">
+          <div class="nail nailTop"></div>
+          <div class="nail nailBot"></div>
+          <div class="chickBody chickBodyRight">
+            <div class="chickHead chickHeadRight">
+              <div id="chickEyeRight"></div>
+            </div>
+            <div class="chickLeg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
