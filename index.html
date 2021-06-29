@@ -4,7 +4,7 @@
     <title>Pecking Chicks Toy</title>
     <meta charset="utf-8">
     <style>
-      #toy {
+      .toy {
         position:relative;
         width: 30rem;
         margin: 10rem auto 0 auto;
@@ -18,15 +18,15 @@
         background-color: #9e6804;
       }
 
-      #sliderTop {
+      .sliderTop {
         animation: slideR 2s linear infinite;
       }
 
-      #sliderBot {
+      .sliderBot {
         animation: slideL 2s linear infinite;
       }
 
-      #topLayer {
+      .topLayer {
         position: absolute;
         top: 0;
         left: 0;
@@ -93,7 +93,7 @@
         transform: translate(-3rem, -1rem);
       }
 
-      #chickEyeLeft {
+      .chickEyeLeft {
         position: absolute;
         right: 0;
         bottom: 0;
@@ -104,7 +104,7 @@
         transform: translate(-0.65rem, -1.3rem);
       }
 
-      #chickEyeRight {
+      .chickEyeRight {
         position: absolute;
         left: 0;
         bottom: 0;
@@ -160,16 +160,16 @@
     </style>
   </head>
   <body>
-    <div id="toy">
-      <div class="slider" id="sliderTop"></div>
-      <div class="slider" id="sliderBot"></div>
-      <div id="topLayer">
+    <div class="toy">
+      <div class="slider sliderTop"></div>
+      <div class="slider sliderBot"></div>
+      <div class="topLayer">
         <div class="attachment">
           <div class="nail nailTop"></div>
           <div class="nail nailBot"></div>
           <div class="chickBody chickBodyLeft">
             <div class="chickHead chickHeadLeft">
-              <div id="chickEyeLeft"></div>
+              <div class="chickEyeLeft"></div>
             </div>
             <div class="chickLeg"></div>
           </div>
@@ -179,7 +179,7 @@
           <div class="nail nailBot"></div>
           <div class="chickBody chickBodyRight">
             <div class="chickHead chickHeadRight">
-              <div id="chickEyeRight"></div>
+              <div class="chickEyeRight"></div>
             </div>
             <div class="chickLeg"></div>
           </div>
